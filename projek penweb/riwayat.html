@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Riwayat Pesanan - HomeElectro</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css" />
+
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    
+    <header class="main-header">
+      <a href="index.html" class="logo">
+        <i class="bx bx-basket"></i> HomeElectro
+      </a>
+      
+      <div class="bx bx-menu" id="menu-icon"></div>
+      
+      <ul class="navbar">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="riwayat.html" class="active">Riwayat</a></li> </ul>
+
+      <div class="nav-right">
+        <i class='bx bx-moon' id="theme-icon"></i>
+
+        <a href="keranjang.html" class="cart-icon">
+            <i class='bx bx-cart'></i>
+            <span class="cart-badge"></span>
+        </a>
+
+        <div class="profile">
+            <img src="images/profil.jpeg" alt="Profile" />
+            <span>Kelompok 1</span>
+        </div>
+      </div>
+    </header>
+
+    <main style="padding-top: 110px; padding-bottom: 80px;">
+      <div class="container">
+        
+        <h2 class="mb-4 fw-bold"><i class="bx bx-history"></i> Riwayat Pembelian</h2>
+
+        <div class="card border-0 shadow-sm product-card">
+            <div class="card-body p-0">
+                <div class="table-responsive">
+                    <table class="table table-hover align-middle mb-0">
+                        <thead class="border-bottom">
+                            <tr>
+                                <th class="ps-4 py-3 bg-transparent text-secondary">No. Invoice</th>
+                                <th class="py-3 bg-transparent text-secondary">Tanggal</th>
+                                <th class="py-3 bg-transparent text-secondary">Barang</th>
+                                <th class="py-3 bg-transparent text-secondary">Total Harga</th>
+                                <th class="py-3 bg-transparent text-secondary">Status</th>
+                                <th class="text-center py-3 bg-transparent text-secondary">Aksi</th>
+                            </tr>
+                        </thead>
+                        <tbody class="border-0">
+                            <tr>
+                                <td class="ps-4 fw-bold text-primary bg-transparent">#INV-2025001</td>
+                                <td class="text-secondary bg-transparent">01 Jan 2026</td>
+                                <td class="bg-transparent">
+                                    <div class="d-flex flex-column text-secondary">
+                                        <span class="fw-bold">Kulkas 2 Pintu</span>
+                                        <small class="text-muted">+ 1 barang lainnya</small>
+                                    </div>
+                                </td>
+                                <td class="fw-bold text-danger bg-transparent">Rp 3.500.000</td>
+                                <td class="bg-transparent"><span class="badge bg-success">Selesai</span></td>
+                                <td class="text-center bg-transparent">
+                                    <button class="btn btn-sm btn-outline-primary rounded-pill">Detail</button>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td class="ps-4 fw-bold text-primary bg-transparent">#INV-2025002</td>
+                                <td class="text-secondary bg-transparent">05 Jan 2026</td>
+                                <td class="bg-transparent">
+                                    <div class="d-flex flex-column text-secondary">
+                                        <span class="fw-bold">Blender Serbaguna</span>
+                                    </div>
+                                </td>
+                                <td class="fw-bold text-danger bg-transparent">Rp 350.000</td>
+                                <td class="bg-transparent"><span class="badge bg-warning text-dark">Dikirim</span></td>
+                                <td class="text-center bg-transparent">
+                                    <button class="btn btn-sm btn-outline-primary rounded-pill">Detail</button>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td class="ps-4 fw-bold text-primary bg-transparent">#INV-2025003</td>
+                                <td class="text-secondary bg-transparent">06 Jan 2026</td>
+                                <td class="bg-transparent">
+                                    <div class="d-flex flex-column text-secondary">
+                                        <span class="fw-bold">Mesin Cuci Otomatis</span>
+                                    </div>
+                                </td>
+                                <td class="fw-bold text-danger bg-transparent">Rp 3.200.000</td>
+                                <td class="bg-transparent"><span class="badge bg-danger">Dibatalkan</span></td>
+                                <td class="text-center bg-transparent">
+                                    <button class="btn btn-sm btn-outline-secondary rounded-pill" disabled>Detail</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+      </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-box">
+                <h3>HomeElectro</h3>
+                <p>
+                    HomeElectro adalah toko alat elektronik rumah tangga terpercaya 
+                    yang menyediakan produk berkualitas dengan harga terjangkau.
+                </p>
+            </div>
+            <div class="footer-box">
+                <h3>Menu</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Produk</a></li>
+                    <li><a href="about.html">Tentang Kami</a></li>
+                    <li><a href="contact.html">Kontak</a></li>
+                </ul>
+            </div>
+            <div class="footer-box">
+                <h3>Layanan</h3>
+                <ul>
+                    <li><a href="chat.html">Live Chat</a></li>
+                    <li><a href="garansi.html">Klaim Garansi</a></li>
+                    <li><a href="riwayat.html">Cek Pesanan</a></li>
+                </ul>
+            </div>
+            <div class="footer-box">
+                <h3>Hubungi Kami</h3>
+                <p><i class="bx bx-map"></i> Depok, Indonesia</p>
+                <p><i class="bx bx-phone"></i> 0812-3456-7890</p>
+                <p><i class="bx bx-envelope"></i> homeelectro@gmail.com</p>
+                <div class="social">
+                    <a href="#"><i class="bx bxl-instagram"></i></a>
+                    <a href="#"><i class="bx bxl-facebook"></i></a>
+                    <a href="#"><i class="bx bxl-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 HomeElectro | Kelompok 1 - All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>

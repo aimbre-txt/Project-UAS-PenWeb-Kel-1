@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Produk Elektronik - HomeElectro</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css" />
+
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    
+    <header class="main-header">
+      <a href="index.html" class="logo">
+         <i class="bx bx-basket"></i> HomeElectro 
+      </a>
+
+      <div class="bx bx-menu" id="menu-icon"></div>
+      
+      <ul class="navbar">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html" class="active">Products</a></li> <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="riwayat.html">Riwayat</a></li>
+      </ul>
+
+      <div class="nav-right">
+        <i class='bx bx-moon' id="theme-icon"></i>
+
+        <a href="keranjang.html" class="cart-icon">
+          <i class='bx bx-cart'></i>
+          <span class="cart-badge"></span>
+        </a>
+
+        <div class="profile">
+          <img src="images/profil.jpeg" alt="Profile" />
+          <span>Kelompok 1</span>
+        </div>
+      </div>
+    </header>
+
+    <main style="padding-top: 110px; padding-bottom: 50px;">
+      <section class="container">
+        <h2 class="section-title">Katalog Produk</h2>
+
+        <div class="product-grid">
+
+          <div class="product-card">
+            <img src="images/kulkas.jpeg" alt="Kulkas" />
+            <h3 class="title">Kulkas 2 Pintu</h3>
+            <p class="price">Rp 3.200.000</p>
+            <button class="btn-custom" onclick="bukaDetail('Kulkas 2 pintu','Rp 3.200.000','images/kulkas.jpeg','Kulkas 2 Pintu ini dilengkapi teknologi Prime Fresh dan sensor pintar ECONAVI.')">
+                Beli
+            </button>
+          </div>
+
+          <div class="product-card">
+            <img src="images/mesinCuci.jpeg" alt="Mesin Cuci" />
+            <h3 class="title">Mesin Cuci Otomatis</h3>
+            <p class="price">Rp 3.200.000</p>
+            <button class="btn-custom" onclick="bukaDetail('Mesin Cuci Otomatis','Rp 3.200.000','images/mesinCuci.jpeg','Mesin Cuci front load memberikan kemudahan pencucian 8 Kg full otomatis.')">
+                Beli
+            </button>
+          </div>
+
+          <div class="product-card">
+            <img src="images/blender2.jpeg" alt="Blender" />
+            <h3 class="title">Blender Serbaguna</h3>
+            <p class="price">Rp 350.000</p>
+            <button class="btn-custom" onclick="bukaDetail('Blender Serbaguna','Rp 350.000','images/blender2.jpeg','Blender compact teknologi Powelix untuk menghaluskan bahan dengan cepat.')">
+                Beli
+            </button>
+          </div>
+
+          <div class="product-card">
+            <img src="images/kipas.jpeg" alt="Kipas Angin" />
+            <h3 class="title">Kipas Angin Berdiri</h3>
+            <p class="price">Rp 280.000</p>
+            <button class="btn-custom" onclick="bukaDetail('Kipas Angin Berdiri','Rp 280.000','images/kipas.jpeg','Kipas angin berdiri dengan 3 pilihan kecepatan dan suara mesin halus.')">
+                Beli
+            </button>
+          </div>
+
+          <div class="product-card">
+            <img src="images/mejikom.jpeg" alt="Rice Cooker" />
+            <h3 class="title">Rice Cooker 1.8L</h3>
+            <p class="price">Rp 420.000</p>
+            <button class="btn-custom" onclick="bukaDetail('Rice Cooker','Rp 420.000','images/mejikom.jpeg','Rice Cooker Cosmos Inner Pan Non Stick Coating Anti Lengket 1.8 Liter.')">
+                Beli
+            </button>
+          </div>
+
+          <div class="product-card">
+            <img src="images/oven.jpg" alt="microwave oven" />
+            <h3 class="title">Oven Listrik</h3>
+            <p class="price">Rp 700.000</p>
+            <button class="btn-custom" onclick="bukaDetail('Oven Listrik','Rp 700.000','images/oven.jpg','Oven Hock kapasitas 23 liter untuk memanggang kue dan ayam.')">
+                Beli
+            </button>
+          </div>
+
+          <div class="product-card">
+            <img src="images/ac.jpg" alt="Air Conditioner" />
+            <h3 class="title">AC 1/2 PK</h3>
+            <p class="price">Rp 3.500.000</p>
+            <button class="btn-custom" onclick="bukaDetail('AC 1/2 PK','Rp 3.500.000','images/ac.jpg','AC Low Watt dengan pendinginan cepat dan garansi kompresor 10 tahun.')">
+                Beli
+            </button>
+          </div>
+
+          <div class="product-card">
+            <img src="images/haridryer.jpg" alt="Hair Dryer" />
+            <h3 class="title">Hair Dryer</h3>
+            <p class="price">Rp 500.000</p>
+            <button class="btn-custom" onclick="bukaDetail('Hair Dryer','Rp 500.000','images/haridryer.jpg','Pengering Rambut Ionik 4 in 1 untuk perawatan rambut maksimal.')">
+                Beli
+            </button>
+          </div>
+
+        </div> 
+      </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-box">
+                <h3>HomeElectro</h3>
+                <p>
+                    HomeElectro adalah toko alat elektronik rumah tangga terpercaya 
+                    yang menyediakan produk berkualitas dengan harga terjangkau.
+                </p>
+            </div>
+            <div class="footer-box">
+                <h3>Menu</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Produk</a></li>
+                    <li><a href="about.html">Tentang Kami</a></li>
+                    <li><a href="contact.html">Kontak</a></li>
+                </ul>
+            </div>
+            <div class="footer-box">
+                <h3>Layanan</h3>
+                <ul>
+                    <li><a href="chat.html">Live Chat</a></li>
+                    <li><a href="garansi.html">Klaim Garansi</a></li>
+                    <li><a href="riwayat.html">Cek Pesanan</a></li>
+                </ul>
+            </div>
+            <div class="footer-box">
+                <h3>Hubungi Kami</h3>
+                <p><i class="bx bx-map"></i> Depok, Indonesia</p>
+                <p><i class="bx bx-phone"></i> 0812-3456-7890</p>
+                <p><i class="bx bx-envelope"></i> homeelectro@gmail.com</p>
+                <div class="social">
+                    <a href="#"><i class="bx bxl-instagram"></i></a>
+                    <a href="#"><i class="bx bxl-facebook"></i></a>
+                    <a href="#"><i class="bx bxl-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 HomeElectro | Kelompok 1 - All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="js/script.js"></script> 
+  </body>
+</html>

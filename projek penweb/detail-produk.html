@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Detail Produk - HomeElectro</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css" />
+
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    
+    <header class="main-header">
+      <a href="index.html" class="logo">
+        <i class="bx bx-basket"></i> HomeElectro
+      </a>
+      
+      <div class="bx bx-menu" id="menu-icon"></div>
+      
+      <ul class="navbar">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="riwayat.html">Riwayat</a></li>
+      </ul>
+
+      <div class="nav-right">
+        <i class='bx bx-moon' id="theme-icon"></i>
+
+        <a href="keranjang.html" class="cart-icon">
+            <i class='bx bx-cart'></i>
+            <span class="cart-badge"></span>
+        </a>
+
+        <div class="profile">
+            <img src="images/profil.jpeg" alt="Profile" />
+            <span>Kelompok 1</span>
+        </div>
+      </div>
+    </header>
+
+    <main style="padding-top: 110px; padding-bottom: 80px;">
+      <div class="container">
+        
+        <button onclick="history.back()" class="btn btn-outline-secondary mb-4 rounded-pill">
+            <i class="bx bx-arrow-back"></i> Kembali
+        </button>
+
+        <div class="row align-items-center">
+            
+            <div class="col-md-5 mb-4 mb-md-0 text-center">
+                <div class="card border-0 shadow-sm p-3 product-card">
+                    <img id="detail-img" src="" alt="Produk Loading..." class="img-fluid rounded">
+                </div>
+            </div>
+
+            <div class="col-md-7">
+                <div class="product-info ps-md-4">
+                    <h1 id="detail-title" class="fw-bold mb-2 title">Memuat Nama Produk...</h1>
+                    
+                    <div class="mb-3">
+                        <span class="badge bg-warning text-dark"><i class='bx bxs-star'></i> 4.8</span>
+                        <span class="text-secondary ms-2">Terjual 100+</span>
+                    </div>
+
+                    <h2 id="detail-price" class="text-danger fw-bold mb-4">Rp 0</h2>
+
+                    <h5 class="title">Deskripsi Produk:</h5>
+                    <p id="detail-desc" class="text-secondary lh-lg mb-5">
+                        Memuat deskripsi produk...
+                    </p>
+
+                    <div class="d-flex gap-3">
+                        <button class="btn btn-outline-primary btn-lg w-50 rounded-pill" onclick="tambahKeranjang()">
+                           <i class='bx bx-cart-add'></i> Keranjang
+                        </button>
+                        <button class="btn btn-custom btn-lg w-50" onclick="beliSekarang()">
+                           Beli Sekarang
+                        </button>
+                    </div>
+
+                    <div class="mt-4 p-3 product-card rounded border border-light">
+                        <small class="d-block text-secondary mb-1"><i class='bx bx-shield-quarter text-success'></i> Garansi Resmi Toko</small>
+                        <small class="d-block text-secondary"><i class='bx bx-package text-warning'></i> Pengiriman Aman & Cepat</small>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-box">
+                <h3>HomeElectro</h3>
+                <p>
+                    HomeElectro adalah toko alat elektronik rumah tangga terpercaya 
+                    yang menyediakan produk berkualitas dengan harga terjangkau.
+                </p>
+            </div>
+            <div class="footer-box">
+                <h3>Menu</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Produk</a></li>
+                    <li><a href="about.html">Tentang Kami</a></li>
+                    <li><a href="contact.html">Kontak</a></li>
+                </ul>
+            </div>
+            <div class="footer-box">
+                <h3>Layanan</h3>
+                <ul>
+                    <li><a href="chat.html">Live Chat</a></li>
+                    <li><a href="garansi.html">Klaim Garansi</a></li>
+                    <li><a href="riwayat.html">Cek Pesanan</a></li>
+                </ul>
+            </div>
+            <div class="footer-box">
+                <h3>Hubungi Kami</h3>
+                <p><i class="bx bx-map"></i> Depok, Indonesia</p>
+                <p><i class="bx bx-phone"></i> 0812-3456-7890</p>
+                <p><i class="bx bx-envelope"></i> homeelectro@gmail.com</p>
+                <div class="social">
+                    <a href="#"><i class="bx bxl-instagram"></i></a>
+                    <a href="#"><i class="bx bxl-facebook"></i></a>
+                    <a href="#"><i class="bx bxl-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 HomeElectro | Kelompok 1 - All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>

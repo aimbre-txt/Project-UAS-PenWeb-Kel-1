@@ -1,0 +1,297 @@
+/* =========================================
+   1. SETUP GLOBAL & VARIABEL WARNA
+   ========================================= */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+    /* --- TEMA TERANG (DEFAULT) --- */
+    --main-color: #ff6347;       /* Warna Utama (Tomato) */
+    --bg-color: #ffffff;         /* Background Halaman */
+    --text-color: #2c2c2c;       /* Warna Teks Utama */
+    --text-secondary: #6c757d;   /* Warna Teks Pendukung */
+    --navbar-bg: #ffffff;        /* Background Navbar */
+    --card-bg: #ffffff;          /* Background Kartu Produk */
+    --border-color: rgba(0,0,0,0.1);
+    --shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+/* --- TEMA GELAP (DARK MODE) --- */
+body.dark-mode {
+    --bg-color: #121212;         /* Hitam Pekat */
+    --text-color: #e4e6eb;       /* Putih Tulang */
+    --text-secondary: #b0b3b8;   /* Abu-abu Terang */
+    --navbar-bg: #18191a;        /* Hitam Navbar */
+    --card-bg: #242526;          /* Abu-abu Gelap (Card) */
+    --border-color: rgba(255,255,255,0.1);
+    --shadow: 0 4px 15px rgba(0,0,0,0.5);
+}
+
+/* Reset Dasar */
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; text-decoration: none; list-style: none; }
+
+body {
+    background: var(--bg-color);
+    color: var(--text-color);
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+a { text-decoration: none !important; color: inherit; }
+ul { padding: 0; margin: 0; }
+
+/* =========================================
+   2. NAVBAR (STICKY & RESPONSIVE)
+   ========================================= */
+.main-header {
+    position: fixed; top: 0; left: 0; width: 100%; height: 80px; z-index: 1000;
+    background: var(--navbar-bg);
+    box-shadow: var(--shadow);
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 0 5%;
+    transition: 0.3s;
+}
+
+.logo { font-size: 1.6rem; font-weight: 700; color: var(--main-color); display: flex; align-items: center; gap: 5px; }
+
+.navbar { display: flex; gap: 2rem; margin-bottom: 0; }
+.navbar a {
+    color: var(--text-color); font-size: 1rem; font-weight: 500;
+    transition: 0.3s; position: relative;
+}
+.navbar a:hover, .navbar a.active { color: var(--main-color); }
+.navbar a.active::after {
+    content: ''; position: absolute; left: 0; bottom: -5px;
+    width: 100%; height: 2px; background: var(--main-color);
+}
+
+.nav-right { display: flex; align-items: center; gap: 18px; }
+#theme-icon { font-size: 1.4rem; cursor: pointer; color: var(--text-color); transition: 0.3s; }
+#theme-icon:hover { color: var(--main-color); transform: rotate(15deg); }
+
+.cart-icon { position: relative; font-size: 1.6rem; color: var(--text-color); }
+.cart-badge {
+    position: absolute; top: -5px; right: -8px;
+    background: var(--main-color); color: white;
+    font-size: 0.7rem; font-weight: bold;
+    padding: 2px 6px; border-radius: 50%;
+}
+
+.profile { display: flex; align-items: center; gap: 10px; cursor: pointer; }
+.profile img { width: 35px; height: 35px; border-radius: 50%; object-fit: cover; border: 2px solid var(--main-color); }
+.profile span { font-size: 0.9rem; font-weight: 500; color: var(--text-color); display: none; }
+@media(min-width: 992px) { .profile span { display: block; } }
+
+#menu-icon { display: none; font-size: 28px; cursor: pointer; color: var(--text-color); }
+
+/* =========================================
+   3. UTILITIES & DARK MODE OVERRIDES
+   ========================================= */
+/* Memaksa teks bootstrap (text-muted/secondary) berubah warna saat dark mode */
+body.dark-mode .text-muted, 
+body.dark-mode .text-secondary {
+    color: var(--text-secondary) !important;
+}
+
+body.dark-mode .bg-light {
+    background-color: var(--card-bg) !important;
+}
+
+body.dark-mode .table {
+    color: var(--text-color) !important;
+    --bs-table-bg: transparent;
+}
+
+/* =========================================
+   4. COMPONENTS (BUTTONS & CARDS)
+   ========================================= */
+.btn-custom {
+    background: var(--main-color); color: white;
+    padding: 10px 25px; border-radius: 50px;
+    border: none; font-weight: 500; cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+.btn-custom:hover {
+    background: #e0482e; transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(255, 99, 71, 0.4); color: white;
+}
+
+/* Product Card Stabil */
+.product-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color) !important;
+    border-radius: 15px;
+    padding: 15px;
+    transition: 0.3s;
+    height: 100%;
+    display: flex; flex-direction: column; justify-content: space-between;
+}
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow);
+    border-color: var(--main-color) !important;
+}
+.product-card img {
+    border-radius: 10px; margin-bottom: 15px;
+    mix-blend-mode: multiply; /* Agar background putih gambar menyatu (khusus light mode) */
+}
+body.dark-mode .product-card img { mix-blend-mode: normal; border-radius: 10px; }
+
+.product-card .title { font-size: 1.1rem; font-weight: 600; margin-bottom: 5px; color: var(--text-color); }
+.product-card .price { color: var(--main-color); font-weight: 700; font-size: 1.1rem; }
+
+/* =========================================
+   5. HALAMAN HOME (SLIDER)
+   ========================================= */
+.home-section { padding-top: 20px; padding-bottom: 40px; }
+.home-slider { width: 100%; height: 350px; border-radius: 20px; overflow: hidden; box-shadow: var(--shadow); }
+.swiper-slide img { width: 100%; height: 100%; object-fit: cover; }
+.section-title { text-align: center; font-size: 2rem; font-weight: 700; margin-bottom: 2rem; color: var(--text-color); }
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+}
+
+/* =========================================
+   6. HALAMAN CHAT (STYLE KHUSUS)
+   ========================================= */
+.chat-wrapper {
+    max-width: 600px; margin: 0 auto;
+    background: var(--card-bg);
+    border-radius: 15px;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border-color);
+    overflow: hidden;
+}
+.chat-header {
+    background: var(--main-color); color: white;
+    padding: 15px 20px; display: flex; align-items: center; gap: 15px;
+}
+.chat-header img { width: 45px; height: 45px; border-radius: 50%; border: 2px solid white; object-fit: cover; }
+
+.chat-box {
+    height: 400px; overflow-y: auto; padding: 20px;
+    background: var(--bg-color); /* Ikut background body */
+    display: flex; flex-direction: column; gap: 15px;
+}
+
+.message {
+    max-width: 75%; padding: 12px 18px; border-radius: 20px;
+    font-size: 0.95rem; line-height: 1.5; word-wrap: break-word;
+}
+.message.admin {
+    align-self: flex-start;
+    background: var(--card-bg); /* Warna kartu */
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
+    border-bottom-left-radius: 2px;
+}
+.message.user {
+    align-self: flex-end;
+    background: var(--main-color);
+    color: white;
+    border-bottom-right-radius: 2px;
+}
+
+.chat-input-area {
+    padding: 15px; background: var(--card-bg);
+    border-top: 1px solid var(--border-color);
+    display: flex; gap: 10px;
+}
+.chat-input-area input {
+    background: var(--bg-color); border: 1px solid var(--border-color);
+    color: var(--text-color); border-radius: 25px; padding: 10px 20px;
+}
+.chat-input-area input:focus {
+    background: var(--bg-color); color: var(--text-color);
+    border-color: var(--main-color); box-shadow: none;
+}
+
+/* =========================================
+   7. FOOTER (FINAL & RAPI)
+   ========================================= */
+.footer {
+    background: var(--card-bg);
+    padding: 50px 0 20px;
+    border-top: 1px solid var(--border-color);
+    margin-top: auto; /* Agar footer selalu di bawah jika konten sedikit */
+}
+
+.footer-container {
+    max-width: 1200px; margin: 0 auto; padding: 0 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+}
+
+.footer-box h3 { font-size: 1.2rem; margin-bottom: 1.2rem; color: var(--main-color); font-weight: 600; }
+.footer-box p, .footer-box ul li { margin-bottom: 0.8rem; font-size: 0.95rem; color: var(--text-secondary); line-height: 1.6; }
+.footer-box ul li a { color: var(--text-secondary); transition: 0.3s; }
+.footer-box ul li a:hover { color: var(--main-color); padding-left: 5px; }
+
+.social { display: flex; gap: 10px; margin-top: 1rem; }
+.social a {
+    width: 35px; height: 35px; background: var(--main-color); color: white;
+    display: flex; align-items: center; justify-content: center;
+    border-radius: 50%; transition: 0.3s;
+}
+.social a:hover { transform: translateY(-3px); background: #e0482e; }
+
+.footer-bottom {
+    text-align: center; padding-top: 20px; margin-top: 40px;
+    border-top: 1px solid var(--border-color);
+    color: var(--text-secondary); font-size: 0.9rem;
+}
+
+/* =========================================
+   8. RESPONSIVE MEDIA QUERIES
+   ========================================= */
+@media (max-width: 991px) {
+    .main-header { padding: 0 20px; }
+    .navbar a { display: block; margin: 10px 0; }
+}
+
+@media (max-width: 768px) {
+    #menu-icon { display: block; }
+    
+    .navbar {
+        position: absolute; top: 80px; left: 0; width: 100%;
+        background: var(--navbar-bg);
+        flex-direction: column; gap: 0;
+        box-shadow: var(--shadow);
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0); /* Tersembunyi */
+        transition: 0.4s ease-in-out;
+    }
+    
+    .navbar.active { clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); /* Muncul */ }
+    
+    .navbar a {
+        display: block; padding: 15px 20px;
+        border-bottom: 1px solid var(--border-color);
+        font-size: 1.1rem;
+    }
+    
+    .home-slider { height: 200px; }
+    .section-title { font-size: 1.5rem; }
+}
+/* =========================================
+   FIX: PAKSA TEKS ABOUT JADI PUTIH DI DARK MODE
+   ========================================= */
+body.dark-mode .product-card .card-body p,
+body.dark-mode .product-card .card-body li,
+body.dark-mode .product-card .card-body span,
+body.dark-mode .product-card .card-body div {
+    color: #e4e6eb !important; /* Paksa jadi putih tulang */
+}
+
+/* Pastikan background list transparan */
+body.dark-mode .list-group-item {
+    background-color: transparent !important;
+    color: #e4e6eb !important;
+}
+
+/* Judul Card juga dipaksa putih */
+body.dark-mode .card-title {
+    color: #ffffff !important;
+}
