@@ -1,6 +1,6 @@
 # 🛒 HomeElectro - Toko Alat Elektronik Rumah
 
-**HomeElectro** adalah website e-commerce responsif yang dirancang untuk penjualan alat elektronik rumah tangga. Proyek ini dibuat sebagai tugas akhir mata kuliah **Dasar-Dasar Pemrograman (DDP)** / Pengembangan Web.
+**HomeElectro** adalah website e-commerce responsif yang dirancang untuk penjualan alat elektronik rumah tangga. Proyek ini dibuat sebagai tugas akhir mata kuliah Pemrograman Web.
 
 Website ini memiliki fitur lengkap mulai dari katalog produk, keranjang belanja yang menyimpan data (Local Storage), simulasi chat bot, hingga fitur Dark Mode yang modern.
 
@@ -85,4 +85,5 @@ Proyek ini dibangun menggunakan teknologi web standar tanpa framework backend (C
 ![lainnya](ss/3.png)
 ![lainnya](ss/4.png)
 ![lainnya](ss/5.png)
+
 ![lainnya](ss/6.png)
