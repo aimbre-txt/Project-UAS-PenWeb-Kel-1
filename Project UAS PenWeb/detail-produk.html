@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Detail Produk</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Navbar -->
+<header class="detail-header">
+  <a href="index.html" class="back-link">← Kembali</a>
+</header>
+
+<!-- DETAIL PRODUK -->
+<div class="detail-container">
+  <div class="detail-row">
+
+    <!-- GAMBAR -->
+    <div class="detail-image">
+      <img id="gambar" alt="Produk">
+    </div>
+
+    <!-- INFO -->
+    <div class="detail-info">
+      <h2 id="nama"></h2>
+      <h4 id="harga"></h4>
+      <p id="deskripsi"></p>
+
+      <div class="detail-buttons">
+        <button class="btn-cart" onclick="keranjang()">
+          🛒 Keranjang
+        </button>
+
+        <button class="btn-buy" onclick="beli()">
+          Beli Sekarang
+        </button>
+      </div>
+    </div>
+
+  </div>
+</div>
+<script src="main.js"></script>
+
+</body>
+</html>

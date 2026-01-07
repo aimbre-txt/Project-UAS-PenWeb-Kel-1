@@ -1,0 +1,890 @@
+/* =====================================================
+   1. FONT GOOGLE & RESET CSS
+===================================================== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  scroll-behavior: smooth;
+}
+
+/* =====================================================
+   2. VARIABEL WARNA GLOBAL
+===================================================== */
+:root {
+  --primary: #ff8800;
+  --accent: #ffc107;
+  --orange: #ff7e00;
+  --bg: #efefef;
+  --white: #ffffff;
+  --text: #393838;
+}
+
+/* =====================================================
+   3. BODY, SECTION, & GLOBAL STYLE
+===================================================== */
+body {
+  background: var(--bg);
+  color: var(--text);
+  background-color: #e5c187;
+}
+
+section {
+  padding: 4.5rem 0 1.5rem;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+  object-fit: contain;
+}
+
+/* =====================================================
+   4. ABOUT HEADER & SECTION
+===================================================== */
+.about-header {
+  background-color: #cad5e4;
+  color: white;
+  padding: 5px;
+}
+
+.about-header h1 {
+  margin: 5px 0 0;
+}
+
+.back-home {
+  color: black;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.about-section {
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 20px;
+}
+
+.about-box {
+  background: white;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.about-box h2 {
+  color: #01050b;
+}
+
+.about-box ul {
+  padding-left: 20px;
+}
+
+.about-footer {
+  text-align: center;
+  padding: 15px;
+  background: var(--orange);
+  color: #fff;
+}
+
+/* =====================================================
+   5. HEADER & NAVBAR
+===================================================== */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: var(--white);
+  background-color: #c5b899;
+  padding: 5px 4%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 8px 11px rgba(14, 55, 54, 0.15);
+  z-index: 1000;
+}
+
+/* Logo */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.logo .bx {
+  font-size: 27px;
+  color: var(--orange);
+}
+
+/* Navigation Menu */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 15px 20;
+}
+
+.navbar a {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--text);
+  border-radius: 20px;
+  transition: 0.3s;
+}
+
+.navbar a:hover {
+  background: var(--primary);
+  color: var(--white);
+}
+
+/* Mobile Menu Icon */
+#menu-icon {
+  font-size: 24px;
+  cursor: pointer;
+  display: none;
+}
+/* =====================================================
+   5. CART ICON 
+===================================================== */
+.menu a {
+  margin: 0 12px;
+  text-decoration: none;
+  color: #000;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.cart-icon {
+  position: relative;
+  font-size: 26px;
+  color: #f2f1ee;
+  text-decoration: none;
+}
+
+.cart-badge {
+  position: absolute;
+  top: -6px;
+  right: -8px;
+  background: red;
+  color: #fff;
+  font-size: 12px;
+  padding: 2px 6px;
+  border-radius: 50%;
+}
+
+.user {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.user img {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+}
+
+/* keranjang */
+.cart-title {
+  padding: 30px 40px;
+}
+
+.cart-container {
+  padding: 0 40px;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  padding: 16px;
+  margin-bottom: 16px;
+  border-radius: 10px;
+}
+
+.cart-item img {
+  width: 90px;
+  margin-right: 16px;
+}
+
+.cart-info {
+  flex: 1;
+}
+
+.cart-info input {
+  width: 60px;
+  margin-top: 6px;
+}
+
+.remove-btn {
+  background: red;
+  color: #fff;
+  border: none;
+  padding: 8px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.cart-total {
+  max-width: 300px;
+  margin-left: auto;
+  background: #fff3cd;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.checkout-btn {
+  width: 100%;
+  background: #f5b400;
+  border: none;
+  padding: 12px;
+  margin-top: 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* =====================================================
+   6. PROFILE DROPDOWN MENU
+===================================================== */
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  position: relative;
+}
+
+.profile img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.profile span {
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.profile-list {
+  position: absolute;
+  top: 60px;
+  right: 0;
+  width: 170px;
+  background: var(--white);
+  border-radius: 8px;
+  padding: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  display: none;
+}
+
+.profile-list li {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.profile-list li:hover {
+  background: #f2f2f2;
+}
+
+/* =====================================================
+   7. CONTAINER & JUDUL SECTION
+===================================================== */
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
+  padding: 100px 0 40px;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+/* =====================================================
+   8. SLIDER / SWIPER
+===================================================== */
+.home-slider {
+  width: 100%;
+  max-width: 1100px;
+  margin: auto;
+  padding-bottom: 40px;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide img {
+  width: 100%;
+  height: auto;
+  max-height: 350px;
+  object-fit: cover;
+  display: block;
+}
+
+/* =====================================================
+   9. GRID & CARD PRODUK
+===================================================== */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.product-card {
+  background: var(--white);
+  padding: 20px;
+  border-radius: 20px;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.product-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+.product-card img {
+  width: 100%;
+  max-height: 260px;    
+  object-fit: contain;
+  margin-bottom: 15px;
+}
+.products img {
+  width: 100%;
+  height: 800px;
+}
+
+.price {
+  color: var(--primary);
+  font-weight: bold;
+}
+
+
+/* =====================================================
+   10. BUTTON
+===================================================== */
+.btn {
+  margin-top: 5px;
+  background: var(--primary);
+  color: var(--white);
+  border: none;
+  padding: 10px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: var(--accent);
+  color: black;
+}
+
+/* =====================================================
+   11. ABOUT & FOOTER
+===================================================== */
+.about {
+  max-width: 1200px;
+  margin: 50px auto;
+  padding: 20px;
+  line-height: 1.8;
+}
+
+/* ===== FOOTER ===== */
+.footer {
+  background-color: #f07d1e;
+  color: #0654ef;
+  padding: 50px 20px 0;
+  margin-top: 80px;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footer-box h3 {
+  color: #38bdf8;
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+.footer-box p,
+.footer-box li {
+  font-size: 14px;
+  line-height: 1.7;
+  color: #1144ed;
+}
+
+.footer-box ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-box ul li {
+  margin-bottom: 8px;
+}
+
+.footer-box ul li a {
+  color: #1144ed;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.footer-box ul li a:hover {
+  color: #38bdf8;
+}
+
+/* Social Media */
+.social {
+  margin-top: 15px;
+}
+
+.social a {
+  display: inline-block;
+  margin-right: 10px;
+  font-size: 20px;
+  color: #e5e7eb;
+  transition: 0.3s;
+}
+
+.social a:hover {
+  color: #38bdf8;
+}
+
+/* Footer bottom */
+.footer-bottom {
+  border-top: 1px solid #1e293b;
+  text-align: center;
+  padding: 15px 0;
+  margin-top: 40px;
+  font-size: 13px;
+  color: #1144ed;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .footer {
+    text-align: center;
+  }
+
+  .social a {
+    margin: 0 8px;
+  }
+}
+
+
+/* =====================================================
+   12. RESPONSIVE (MOBILE)
+===================================================== */
+@media (max-width: 768px) {
+  #menu-icon {
+    display: block;
+  }
+
+  .navbar {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: white;
+    flex-direction: column;
+    display: none;
+  }
+
+  .navbar.active {
+    display: flex;
+  }
+
+  .navbar a {
+    padding: 14px;
+    text-align: center;
+  }
+
+  .profile span {
+    display: none;
+  }
+
+  .btn {
+    width: 100%;
+    padding: 14px;
+  }
+}
+
+/* =====================================================
+   13. CONTACT US
+===================================================== */
+.contact-cards {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.contact-card {
+  flex: 1;
+  min-width: 220px;
+  background: #f8f9fa;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.contact-card i {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.contact-card .whatsapp {
+  color: #25D366;
+}
+
+.contact-card .email {
+  color: #0d6efd;
+}
+
+.contact-btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 18px;
+  background-color: #0d6efd;
+  color: white;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.contact-btn:hover {
+  background-color: #084298;
+}
+/* =========================
+   14.KHUSUS DETAIL PRODUK
+========================= */
+.detail-header {
+  position: relative;   
+  background: #c5b899;
+  padding: 12px 20px;  
+  height: auto;
+  box-shadow: none;
+}
+
+.detail-header .back-link {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+.detail-container {
+  padding: 40px 20px;
+}
+
+.detail-row {
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+
+.detail-image {
+  flex: 1;
+  text-align: center;
+}
+
+.detail-image img {
+  max-width: 100%;
+  max-height: 520px;
+  height: auto;
+  object-fit: contain;
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.detail-info {
+  flex: 1;
+}
+
+.detail-info h2 {
+  margin-bottom: 10px;
+}
+
+.detail-info h3 {
+  color: #2e7d32;
+  margin-bottom: 15px;
+}
+
+.detail-info p {
+  line-height: 1.6;
+}
+
+.detail-buttons {
+  display: flex;
+  gap: 15px;
+  margin-top: 25px;
+}
+
+.detail-buttons button {
+  flex: 1;
+  padding: 12px;
+  border: none;
+  border-radius: 25px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.btn-cart {
+  background: orange;
+  color: white;
+}
+
+.btn-buy {
+  background: #2e7d32;
+  color: white;
+}
+
+.btn-cart:hover {
+  background: #e69500;
+}
+
+.btn-buy:hover {
+  background: #1b5e20;
+}
+/* ============================
+   15. login page
+=========================== */
+.login-container {
+  width: 100%;
+  padding: 20px;
+}
+
+.login-card {
+  background: #fff;
+  max-width: 360px;
+  margin: auto;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.login-card h2 {
+  margin-bottom: 5px;
+}
+
+.login-card p {
+  color: #777;
+  margin-bottom: 20px;
+}
+
+.input-group {
+  display: flex;
+  align-items: center;
+  background: #f2f2f2;
+  margin-bottom: 15px;
+  padding: 12px;
+  border-radius: 10px;
+}
+
+.input-group i {
+  font-size: 20px;
+  margin-right: 10px;
+  color: #888;
+}
+
+.input-group input {
+  border: none;
+  background: none;
+  outline: none;
+  width: 100%;
+  font-size: 14px;
+}
+
+.btn-login {
+  width: 100%;
+  padding: 12px;
+  background: orange;
+  border: none;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.btn-login:hover {
+  background: #e69500;
+}
+
+small {
+  display: block;
+  margin-top: 15px;
+}
+
+small a {
+  color: orange;
+  text-decoration: none;
+}
+/* ============================
+   16. Chat admin button
+=========================== */
+.chat-container {
+  max-width: 420px;
+  height: 100vh;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+}
+
+/* HEADER */
+.chat-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 15px;
+  background: #0d6efd;
+  color: white;
+  font-weight: bold;
+}
+
+.chat-header .back {
+  color: white;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+/* BODY */
+.chat-body {
+  flex: 1;
+  padding: 15px;
+  overflow-y: auto;
+  background: #f9f9f9;
+}
+
+/* PESAN */
+.message {
+  max-width: 75%;
+  padding: 10px 14px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  font-size: 14px;
+}
+
+.admin {
+  background: #e0e0e0;
+  align-self: flex-start;
+}
+
+.user {
+  background: #0d6efd;
+  color: white;
+  align-self: flex-end;
+}
+
+/* INPUT */
+.chat-input {
+  display: flex;
+  padding: 10px;
+  border-top: 1px solid #ddd;
+}
+
+.chat-input input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  outline: none;
+}
+
+.chat-input button {
+  background: #0d6efd;
+  color: white;
+  border: none;
+  padding: 0 15px;
+  margin-left: 10px;
+  border-radius: 50%;
+  font-size: 18px;
+}
+/* ===== RIWAYAT PESANAN ===== */
+.history-container {
+  max-width: 900px;
+  margin: 80px auto;
+  padding: 20px;
+}
+
+.history-container h2 {
+  margin-bottom: 20px;
+}
+
+.history-card {
+  display: flex;
+  gap: 20px;
+  border: 1px solid #ddd;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  background: #fff;
+}
+
+.history-card img {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+}
+
+.history-info h4 {
+  margin-bottom: 8px;
+}
+
+.history-info small {
+  color: #666;
+}
+/* ============================
+   HALAMAN GARANSI
+============================ */
+.garansi-box {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.garansi-box h3 {
+  margin-bottom: 10px;
+  color: #ff7e00;
+}
+
+.garansi-box ul,
+.garansi-box ol {
+  margin-left: 20px;
+  line-height: 1.8;
+}
+
+.garansi-box p {
+  line-height: 1.6;
+}
